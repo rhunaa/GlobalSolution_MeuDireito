@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Meu Direito",
+    "slug": "meu-direito",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F2F4FB",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "O Meu Direito usa sua localização só para conferir se você está perto da UBS ao pegar senha."
+        }
+      ]
+    ],
+    "splash": {
+      "backgroundColor": "#F2F4FB"
+    }
+  }
+}
