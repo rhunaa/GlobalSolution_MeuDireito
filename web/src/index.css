@@ -1,0 +1,185 @@
+/* Ordem das camadas: o Ant Design fica na camada "antd", entre a base do Tailwind e os utilitários */
+@layer theme, base, antd, components, utilities;
+
+@import "tailwindcss";
+@import "./theme/tokens.css";
+
+/* ---------- Base ---------- */
+html {
+  font-family: var(--font-base);
+  font-size: 100%; /* respeita o tamanho de fonte do navegador; tudo em rem */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+/* ---------- Foco sempre visível ----------
+ * Contorno grosso (3px) + afastamento, em cor própria (--focus),
+ * diferente da cor institucional. Vale para elementos nativos e
+ * para os componentes do Ant Design. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible,
+[data-focus-visible="true"] {
+  outline: 3px solid var(--focus) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px var(--background) !important;
+}
+
+/* Foco forte também nos controles do Ant Design (o input real fica escondido) */
+.ant-radio-input:focus-visible + .ant-radio-inner,
+.ant-checkbox-input:focus-visible + .ant-checkbox-inner,
+.ant-select-focused .ant-select-selector,
+.ant-select-focused .ant-select-content,
+.ant-switch:focus-visible {
+  outline: 3px solid var(--focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* Opções com descrição: o marcador fica alinhado ao rótulo (primeira linha) */
+.ant-radio-wrapper,
+.ant-checkbox-wrapper {
+  align-items: flex-start;
+}
+.ant-radio-wrapper .ant-radio,
+.ant-checkbox-wrapper .ant-checkbox {
+  margin-top: 0.2rem;
+}
+
+/* Alvo do "pular para o conteúdo" e títulos focados por programa */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+[tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+/* A área principal só recebe foco por programa (ao trocar de página): sem contorno em volta de tudo */
+main[tabindex="-1"]:focus-visible {
+  outline: none;
+}
+
+/* ---------- Link "Pular para o conteúdo" ---------- */
+.pular-conteudo {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.pular-conteudo:focus {
+  top: 0.75rem;
+}
+
+/* ---------- Cartões e listas "fofos" (mesmo estilo da capa) ---------- */
+.cartao-fofo {
+  background: var(--surface);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+/* Tabela que se comporta como lista de cartões: cada linha é um cartão arredondado */
+.lista-fofa {
+  border-collapse: separate;
+  border-spacing: 0 0.75rem;
+}
+.lista-fofa thead th {
+  padding-block: 0 0.25rem;
+}
+.lista-fofa tbody > tr > * {
+  background: var(--surface);
+  padding-block: 1rem;
+  border-block: 1px solid var(--border);
+  transition: background-color 0.3s;
+}
+.lista-fofa tbody > tr > :first-child {
+  border-start-start-radius: 0.75rem;
+  border-end-start-radius: 0.75rem;
+  border-inline-start: 1px solid var(--border);
+}
+.lista-fofa tbody > tr > :last-child {
+  border-start-end-radius: 0.75rem;
+  border-end-end-radius: 0.75rem;
+  border-inline-end: 1px solid var(--border);
+}
+.lista-fofa tbody > tr.bg-destaque-novo > * {
+  background: var(--destaque-novo);
+}
+
+/* Textos de apoio maiores em peso fino (Montserrat Light) */
+p.text-muted:not(.text-sm):not(.text-xs) {
+  font-weight: 300;
+}
+
+/* ---------- Texto só para leitores de tela ---------- */
+.so-leitor {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Movimento reduzido ----------
+ * As animações do motion respeitam a preferência via MotionConfig; o Ant Design
+ * desliga as suas pelo token "motion" (TemaProvider). Aqui, o mesmo para CSS. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Impressão ----------
+ * Por padrão nada de navegação é impresso. Páginas que imprimem algo
+ * (ex.: senha do balcão) marcam o bloco com .area-impressao. */
+@media print {
+  /* Imprime só a senha: esconde menu, cabeçalho, formulário e botões */
+  .nao-imprimir,
+  header,
+  nav,
+  aside {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  .area-impressao {
+    border-color: #000 !important;
+    background: #fff !important;
+    color: #000 !important;
+    break-inside: avoid;
+    margin: 0 auto;
+    max-width: 18rem;
+  }
+  .area-impressao * {
+    color: #000 !important;
+  }
+}

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<title>Meu Direito – Documento da solução</title>
+<style>
+@font-face{font-family:M;font-weight:300;src:url(fonts/montserrat-latin-300-normal.woff2)}
+@font-face{font-family:M;font-weight:400;src:url(fonts/montserrat-latin-400-normal.woff2)}
+@font-face{font-family:M;font-weight:600;src:url(fonts/montserrat-latin-600-normal.woff2)}
+@font-face{font-family:M;font-weight:700;src:url(fonts/montserrat-latin-700-normal.woff2)}
+@font-face{font-family:M;font-weight:800;src:url(fonts/montserrat-latin-800-normal.woff2)}
+:root{--navy:#1B2A4A;--ouro:#C9973F;--bg:#F2F4FB;--borda:#DDE3F0;--suave:#4F5D63}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:A4;margin:16mm 16mm 18mm 16mm;@bottom-left{content:"Meu Direito · Global Solution FIAP · CitizenTech";font:400 7pt M,sans-serif;color:#4F5D63}@bottom-right{content:"página " counter(page) " de " counter(pages);font:400 7pt M,sans-serif;color:#4F5D63}}
+@page :first{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+html{font-family:M,sans-serif;color:#1A2328;font-size:9.6pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3{color:var(--navy);line-height:1.2;font-weight:600;break-after:avoid}
+h2{font-size:17pt;margin:0 0 8pt;padding-top:2pt}
+h2 .n{display:inline-block;background:var(--navy);color:#fff;border-radius:5px;padding:0 8px;margin-right:9px;font-weight:700;font-size:15pt}
+h3{font-size:12pt;margin:14pt 0 5pt;font-weight:700}
+p{margin:0 0 7pt}
+.l{font-weight:300;color:var(--suave)}
+ul{margin:0 0 8pt 16pt}
+li{margin-bottom:3pt}
+section{break-before:auto;margin-top:20pt}
+section.nova{break-before:page;margin-top:0}
+.card{background:#fff;border:1px solid var(--borda);border-radius:10px;padding:11pt 13pt;break-inside:avoid}
+.page-bg{background:var(--bg)}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:5pt 0 9pt;font-size:8.6pt;break-inside:auto}
+th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:6pt 8pt}
+th:first-child{border-top-left-radius:8px}th:last-child{border-top-right-radius:8px}
+td{padding:4.6pt 7pt;border-bottom:1px solid var(--borda);vertical-align:top;background:#fff}
+tr{break-inside:avoid}
+tr:last-child td:first-child{border-bottom-left-radius:8px}tr:last-child td:last-child{border-bottom-right-radius:8px}
+td.s{font-weight:700;color:var(--navy)}
+.tag{display:inline-block;border-radius:5px;padding:0 6px;font-size:8pt;font-weight:700;margin-right:3px;white-space:nowrap}
+.app{background:#E2F2E6;color:#1E6B3A}.web{background:#E3EAFB;color:#1E4FBF}.ambos{background:#FCEFD6;color:#7A4A00}
+.ph{background:#FFF3C4;border:1px dashed #C9973F;border-radius:4px;padding:0 6px;color:#7A4A00;font-weight:600}
+.dois{display:grid;grid-template-columns:1fr 1fr;gap:12pt}
+.tres{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10pt}
+.quatro{display:grid;grid-template-columns:repeat(4,1fr);gap:8pt}
+.fig{break-inside:avoid;text-align:center}
+.fig img{width:100%;display:block;border:1px solid var(--borda);border-radius:10px}
+.fig.cel img{border-radius:14px}
+.fig figcaption{font-size:8pt;color:var(--suave);margin-top:4pt}
+.chip{background:var(--navy);color:#fff;border-radius:5px;padding:0 6px}
+.cap-linha{height:4px;background:var(--ouro);width:60pt;border-radius:2px;margin:6pt 0 12pt}
+.nota{border-left:4px solid var(--ouro);background:#fff;padding:7pt 11pt;border-radius:0 8px 8px 0;margin:8pt 0;break-inside:avoid;font-size:9.2pt}
+/* capa */
+.capa{height:297mm;background:var(--bg);padding:20mm 20mm 16mm;position:relative;break-after:page;display:flex;flex-direction:column}
+.capa .elenco{display:flex;gap:6pt;margin:20pt 0 0}
+.capa .elenco img{width:56pt}
+.capa h1{font-size:40pt;font-weight:600;margin-top:34pt}
+.capa .frase{font-size:15pt;font-weight:300;color:var(--suave);margin-top:8pt;max-width:130mm}
+.capa .info{margin-top:auto;display:grid;grid-template-columns:1.2fr 1fr;gap:12pt}
+.capa table{margin:0}
+.jorn{display:flex;gap:6pt;margin:8pt 0 10pt}
+.jorn .e{flex:1;background:#fff;border:1px solid var(--borda);border-radius:9px;padding:7pt 6pt;text-align:center;font-size:8pt;break-inside:avoid}
+.jorn .e b{display:block;color:var(--navy);font-size:8.8pt;margin-bottom:3pt}
+.ods{display:flex;gap:9pt;align-items:flex-start;margin-bottom:8pt;break-inside:avoid}
+.ods .num{flex:none;width:36pt;height:36pt;border-radius:7px;color:#fff;font-weight:800;font-size:15pt;display:flex;align-items:center;justify-content:center}
+.logo{display:flex;align-items:center;gap:10pt}
+</style>
+</head>
+<body>
+
+<!-- ================= CAPA ================= -->
+<div class="capa">
+  <div class="logo">
+    <svg width="46" height="46" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#1B2A4A"/><g fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 26v50"/><path d="M36 78h28"/><path d="M20 38h60"/><path d="M24 38 15 60M24 38l9 22"/><path d="M76 38l-9 22M76 38l9 22"/></g><circle cx="50" cy="20" r="5.5" fill="#fff"/><path d="M12 60a12.5 12.5 0 0 0 25 0Z" fill="#C9973F"/><path d="M63 60a12.5 12.5 0 0 0 25 0Z" fill="#C9973F"/></svg>
+    <div><div style="font-size:23pt;line-height:1;color:#1B2A4A"><span style="font-weight:300">Meu</span><span style="font-weight:700">Direito</span></div>
+    <div style="font-size:6.5pt;letter-spacing:.24em;font-weight:600;color:#4A5878;margin-top:3pt">SEUS DIREITOS, SIMPLES</div></div>
+  </div>
+  <div class="elenco">
+    <img src="img/p0.svg"><img src="img/p1.svg"><img src="img/p2.svg"><img src="img/p3.svg"><img src="img/p4.svg"><img src="img/p5.svg"><img src="img/p6.svg"><img src="img/p7.svg">
+  </div>
+  <h1>O direito já existe.<br>O que falta é<br><span class="chip" style="white-space:nowrap">o caminho</span> até ele.</h1>
+  <p class="frase">Aplicativo do cidadão e plataforma web de quem atende, integrados em tempo real: UBS, CRAS e creches.</p>
+  <div class="cap-linha" style="margin-top:16pt"></div>
+  <p style="font-weight:600;color:#1B2A4A">Global Solution FIAP · CitizenTech</p>
+  <p class="l">Documento da solução</p>
+
+  <div class="info">
+    <div>
+      <p style="font-weight:700;color:#1B2A4A;margin-bottom:4pt">Integrantes (ordem alfabética)</p>
+      <table>
+        <tr><th>Nome completo</th><th style="width:60pt">RM</th></tr>
+        <tr><td><span class="ph">preencher nome 1</span></td><td><span class="ph">RM</span></td></tr>
+        <tr><td><span class="ph">preencher nome 2</span></td><td><span class="ph">RM</span></td></tr>
+        <tr><td><span class="ph">preencher nome 3</span></td><td><span class="ph">RM</span></td></tr>
+      </table>
+    </div>
+    <div>
+      <p style="font-weight:700;color:#1B2A4A;margin-bottom:4pt">Links da entrega</p>
+      <div class="card" style="font-size:8.6pt">
+        <p style="margin-bottom:5pt"><b>Repositório:</b><br><span class="ph">link do GitHub</span></p>
+        <p style="margin-bottom:5pt"><b>Plataforma web:</b><br><span class="ph">link do deploy</span></p>
+        <p style="margin:0"><b>Vídeo-pitch:</b><br>youtu.be/o2VoWSJshE0</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 1. PROBLEMA ================= -->
+<section style="margin-top:0">
+  <h2><span class="n">1</span>Problema e cidadão beneficiado</h2>
+  <div class="cap-linha"></div>
+  <h3>O problema</h3>
+  <p>No Brasil, muitos direitos sociais já existem em lei e já são financiados com dinheiro público: desconto na conta de luz para famílias de baixa renda, Cadastro Único, benefício para pessoa idosa ou com deficiência, remédios gratuitos no SUS, vaga em creche pública. O problema é que <b>o caminho até esses direitos falha em dois pontos</b>:</p>
+  <div class="dois">
+    <div class="card"><h3 style="margin-top:0">1. A pessoa não sabe que tem direito</h3><p style="margin:0">A informação está espalhada, cheia de siglas e escrita em linguagem difícil. Sem saber qual direito procurar, a pessoa desiste antes de começar.</p></div>
+    <div class="card"><h3 style="margin-top:0">2. Quando descobre, o atendimento é um labirinto</h3><p style="margin:0">Fila que ninguém vê, documento que falta, ida e volta ao serviço. Quem atende também trabalha às cegas: não sabe quem vai chegar nem o que a pessoa já tem.</p></div>
+  </div>
+  <p class="nota" style="margin-top:10pt"><span class="ph">Acrescente aqui 1 ou 2 frases sobre o que a equipe observou no território ou conversou com moradores (a proposta pede essa base).</span></p>
+
+  <h3>Cidadão beneficiado</h3>
+  <p>Pessoas atendidas pela rede pública de saúde, assistência social e educação infantil, com foco em quem tem mais dificuldade de acesso: <b>famílias de baixa renda, mães e pais de crianças pequenas, pessoas idosas, pessoas com deficiência e pessoas neurodivergentes</b>. A solução é desenhada a partir de uma pessoa representativa:</p>
+  <div class="card" style="display:flex;gap:14pt;align-items:center">
+    <img src="img/p4.svg" style="width:70pt;flex:none">
+    <div><p style="font-weight:700;color:#1B2A4A;font-size:12pt;margin-bottom:2pt">Juliana, 27 anos, Itaquera (São Paulo)</p>
+    <p style="margin:0">Mãe do Bernardo, de 2 anos. Precisa voltar a trabalhar, mas não tem com quem deixar o filho. A família provavelmente tem direito a vaga em creche, ao Cadastro Único e ao desconto na conta de luz. Ela não sabe disso e, se soubesse, não saberia quais documentos levar nem onde ir. Usa o celular o dia todo, com pouca bateria e dados limitados.</p></div>
+  </div>
+
+  <h3>Por que esse problema</h3>
+  <ul>
+    <li><b>É real e recorrente:</b> acontece toda vez que alguém precisa de um serviço público, e se repete para cada direito (saúde, assistência, educação).</li>
+    <li><b>Une duas pontas que costumam ficar separadas:</b> descobrir o direito (o cidadão) e atender bem (o serviço). Resolver só uma delas não basta.</li>
+    <li><b>Cabe em CitizenTech:</b> usa tecnologia para aproximar cidadão e serviço público, sem substituir o atendimento humano.</li>
+  </ul>
+  <p class="l" style="font-size:8.5pt">Nomes de pessoas, endereços e números do projeto são fictícios e servem apenas à demonstração.</p>
+</section>
+
+<!-- ================= 2. ATORES E JORNADAS ================= -->
+<section class="nova">
+  <h2><span class="n">2</span>Quem participa e a jornada de cada um</h2>
+  <div class="cap-linha"></div>
+  <p>A divisão entre app e web nasceu das jornadas: <b>o app é do cidadão</b> (descobre e acompanha, na rua, com pressa) e <b>a web é de quem atende e de quem gerencia</b> (trabalha sentado, com várias pessoas ao mesmo tempo, precisa de telas largas, teclado e telão).</p>
+  <table>
+    <tr><th style="width:23%">Quem</th><th style="width:12%">Plataforma</th><th>O que quer resolver</th></tr>
+    <tr><td class="s">Cidadão (Juliana)</td><td><span class="tag app">App</span></td><td>Descobrir quais direitos tem, saber o que levar, agendar, pegar senha e acompanhar tudo.</td></tr>
+    <tr><td class="s">Recepcionista da UBS</td><td><span class="tag web">Web</span></td><td>Ver a fila ao vivo, chamar a próxima pessoa, atender quem não tem celular, controlar o telão da sala de espera.</td></tr>
+    <tr><td class="s">Assistente social do CRAS</td><td><span class="tag web">Web</span></td><td>Ver a agenda do dia com os documentos que cada pessoa já confirmou e registrar o resultado do atendimento.</td></tr>
+    <tr><td class="s">Gestora de vagas de creche</td><td><span class="tag web">Web</span></td><td>Acompanhar a lista de espera e abrir vagas, chamando a próxima família.</td></tr>
+    <tr><td class="s">Gestores e público em geral</td><td><span class="tag web">Web</span></td><td>Ver indicadores (espera, faltas, direitos mais procurados) e o movimento atual dos serviços, sem dados pessoais.</td></tr>
+  </table>
+
+  <h3>Jornada do cidadão: o papel de cada plataforma</h3>
+  <table>
+    <tr><th style="width:4%">#</th><th style="width:22%">Etapa</th><th style="width:12%">Onde</th><th>O que acontece</th><th style="width:25%">Dificuldade que resolve</th></tr>
+    <tr><td>1</td><td class="s">Entrar</td><td><span class="tag app">App</span></td><td>Capa com a frase da solução, entrada e passo a passo de 4 telas explicando o que a pessoa vai ver.</td><td>Medo de não entender o app.</td></tr>
+    <tr><td>2</td><td class="s">Descobrir direitos</td><td><span class="tag app">App</span></td><td>Lista de direitos com status (“Você pode ter”, “Agendado”, “Em análise”, “Concedido”), em palavras simples.</td><td>Não saber que tem direito.</td></tr>
+    <tr><td>3</td><td class="s">Saber o que levar</td><td><span class="tag app">App</span></td><td>Cada direito explica o que é, quem pode e traz a lista de documentos, que a pessoa vai marcando.</td><td>Voltar para casa por falta de documento.</td></tr>
+    <tr><td>4</td><td class="s">Agendar no CRAS</td><td><span class="tag ambos">App + Web</span></td><td>O app cria o agendamento com os documentos confirmados; a assistente social vê na agenda do dia, na hora.</td><td>Chegar sem horário e sem preparo.</td></tr>
+    <tr><td>5</td><td class="s">Pegar senha na UBS</td><td><span class="tag ambos">App + Web</span></td><td>Só para quem está até 5 km da unidade (conferido pelo GPS). Aparece na fila da recepcionista e no telão; o app avisa quando chamar.</td><td>Fila física longa, sem criar “fila fantasma”.</td></tr>
+    <tr><td>6</td><td class="s">Vaga na creche</td><td><span class="tag ambos">App + Web</span></td><td>A gestora clica em “Abrir vaga”; o app avisa a família, que aceita ou recusa; a resposta aparece na lista da creche.</td><td>Perder a vaga por não receber o aviso.</td></tr>
+    <tr><td>7</td><td class="s">Acompanhar</td><td><span class="tag ambos">App + Web</span></td><td>O resultado registrado no CRAS muda o status do direito no app.</td><td>Ficar “no escuro” sobre o andamento.</td></tr>
+  </table>
+
+  <h3>Jornada de quem atende (web)</h3>
+  <div class="tres">
+    <div class="card"><p style="font-weight:700;color:#1B2A4A;margin-bottom:4pt">Recepcionista da UBS</p><p style="font-size:9pt;margin:0">Escolhe perfil e unidade → vê a <b>fila ao vivo</b> → “Chamar próximo” (atalho <b>N</b>) → o telão mostra e anuncia a senha → inicia, conclui ou marca “não compareceu” → emite senha no <b>balcão</b> (com impressão) para quem não tem celular.</p></div>
+    <div class="card"><p style="font-weight:700;color:#1B2A4A;margin-bottom:4pt">Assistente social do CRAS</p><p style="font-size:9pt;margin:0">Abre a <b>agenda do dia</b> → vê documentos confirmados e os que faltam → atende → registra o resultado (atendido, falta documento, encaminhado, não compareceu), que <b>atualiza o direito no app</b>.</p></div>
+    <div class="card"><p style="font-weight:700;color:#1B2A4A;margin-bottom:4pt">Gestora de vagas de creche</p><p style="font-size:9pt;margin:0">Acompanha a <b>lista de espera</b> por posição → “Abrir vaga” convoca a próxima família, com prazo de 48 horas → vê a resposta chegar do app e a vaga ser aceita ou recusada.</p></div>
+  </div>
+</section>
+
+<!-- ================= 3. SOLUÇÃO ================= -->
+<section>
+  <h2><span class="n">3</span>A solução proposta</h2>
+  <div class="cap-linha"></div>
+  <p>O <b>Meu Direito</b> une a descoberta de direitos e as filas de serviços públicos numa jornada só. São duas partes que conversam entre si em tempo real, cada uma com um motivo próprio de existir.</p>
+
+  <h3>Aplicativo do cidadão (React Native com Expo)</h3>
+  <div class="quatro">
+    <figure class="fig cel"><img src="img/app_capa.jpg"><figcaption>Capa</figcaption></figure>
+    <figure class="fig cel"><img src="img/app_inicio_0.jpg"><figcaption>Início: o que está acontecendo agora</figcaption></figure>
+    <figure class="fig cel"><img src="img/app_direitos_0.jpg"><figcaption>Direitos e status</figcaption></figure>
+    <figure class="fig cel"><img src="img/app_detalhe_docs_231.jpg"><figcaption>O que levar, com documentos marcados</figcaption></figure>
+  </div>
+  <ul style="margin-top:8pt">
+    <li><b>Fluxo:</b> capa → entrada → passo a passo → abas <b>Início, Direitos, Lugares e Perfil</b>; telas de ação (pegar senha, agendar) abrem por cima das abas.</li>
+    <li><b>Início:</b> mostra só o que está em andamento: a senha (com quantas pessoas estão na frente), o agendamento do dia e a vaga da creche, com os botões de aceitar ou recusar.</li>
+    <li><b>Direitos:</b> o que é, quem pode, o que levar (checklist) e o botão que leva à ação certa (senha, agendar ou ver creches).</li>
+    <li><b>Lugares:</b> UBS, CRAS e creches com movimento atual, endereço, horário e acessibilidade (rampa, banheiro adaptado, Libras).</li>
+    <li><b>Perfil:</b> letras grandes, rever o passo a passo e restaurar os dados de exemplo.</li>
+  </ul>
+
+  <h3>Plataforma web (React, responsiva)</h3>
+  <div class="tres">
+    <figure class="fig"><img src="img/web_ubs.jpg"><figcaption>UBS: fila de atendimento ao vivo</figcaption></figure>
+    <figure class="fig"><img src="img/web_agenda_170.jpg"><figcaption>CRAS: agenda do dia</figcaption></figure>
+    <figure class="fig"><img src="img/web_creche_aberta.jpg"><figcaption>Creche: lista de espera e “Abrir vaga”</figcaption></figure>
+  </div>
+  <p style="margin-top:8pt"><b>Cada tipo de lugar tem a sua própria tela</b>, porque cada serviço trabalha de um jeito: a UBS lida com fila e senhas, o CRAS com agenda e documentos, a creche com lista de espera e vagas. Além dessas, há o <b>telão</b> da sala de espera (alto contraste, senha gigante e voz), os <b>indicadores</b> para gestores e a <b>página pública</b> com o movimento dos serviços, sem dados pessoais.</p>
+  <div class="dois">
+    <figure class="fig"><img src="img/web_indicadores_1081.jpg"><figcaption>Indicadores: direitos por bairro</figcaption></figure>
+    <figure class="fig"><img src="img/web_publico_0.jpg"><figcaption>Página pública: sem dados pessoais</figcaption></figure>
+  </div>
+</section>
+
+<!-- ================= 4. INTEGRAÇÃO ================= -->
+<section class="nova">
+  <h2><span class="n">4</span>Integração entre mobile e web</h2>
+  <div class="cap-linha"></div>
+  <p>App e web usam <b>o mesmo banco</b> (Supabase: PostgreSQL com Realtime). Cada mudança nas tabelas <i>senhas, agendamentos, lista_creche, direitos_cidadao</i> e <i>historico</i> é publicada pelo Realtime, e as duas pontas recebem na hora, sem recarregar.</p>
+
+  <svg viewBox="0 0 700 170" style="width:100%;margin:6pt 0 4pt" font-family="M,sans-serif">
+    <rect x="10" y="30" width="190" height="110" rx="12" fill="#E2F2E6" stroke="#1E6B3A" stroke-width="2"/>
+    <text x="105" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1E6B3A">App do cidadão</text>
+    <text x="105" y="84" text-anchor="middle" font-size="12" fill="#1A2328">Expo / React Native</text>
+    <text x="105" y="104" text-anchor="middle" font-size="11" fill="#4F5D63">pegar senha · agendar</text>
+    <text x="105" y="122" text-anchor="middle" font-size="11" fill="#4F5D63">responder vaga</text>
+    <rect x="255" y="10" width="190" height="150" rx="12" fill="#1B2A4A"/>
+    <text x="350" y="44" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Supabase</text>
+    <text x="350" y="66" text-anchor="middle" font-size="11.5" fill="#CBD5EA">PostgreSQL + regras no banco</text>
+    <text x="350" y="86" text-anchor="middle" font-size="11.5" fill="#CBD5EA">funções (RPC) e gatilhos</text>
+    <text x="350" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#C9973F">Realtime (tempo real)</text>
+    <text x="350" y="134" text-anchor="middle" font-size="11" fill="#CBD5EA">views sem dados pessoais</text>
+    <rect x="500" y="30" width="190" height="110" rx="12" fill="#E3EAFB" stroke="#1E4FBF" stroke-width="2"/>
+    <text x="595" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1E4FBF">Plataforma web</text>
+    <text x="595" y="84" text-anchor="middle" font-size="12" fill="#1A2328">Vite + React + TypeScript</text>
+    <text x="595" y="104" text-anchor="middle" font-size="11" fill="#4F5D63">fila · agenda · creche</text>
+    <text x="595" y="122" text-anchor="middle" font-size="11" fill="#4F5D63">telão · indicadores</text>
+    <path d="M200 85h50" stroke="#C9973F" stroke-width="4" stroke-linecap="round"/><path d="M240 77l10 8-10 8" fill="none" stroke="#C9973F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M210 77l-10 8 10 8" fill="none" stroke="#C9973F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M450 85h45" stroke="#C9973F" stroke-width="4" stroke-linecap="round"/><path d="M485 77l10 8-10 8" fill="none" stroke="#C9973F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M460 77l-10 8 10 8" fill="none" stroke="#C9973F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <h3>Uma ação numa ponta aparece na outra</h3>
+  <table>
+    <tr><th>Ação</th><th style="width:16%">Quem faz</th><th style="width:30%">Quem vê, na hora</th></tr>
+    <tr><td>Pegar senha na UBS</td><td><span class="tag app">App</span></td><td>Fila da recepcionista e telão</td></tr>
+    <tr><td>“Chamar próximo”</td><td><span class="tag web">Web</span></td><td>Telão (com voz) e senha no app</td></tr>
+    <tr><td>Agendar no CRAS, com documentos</td><td><span class="tag app">App</span></td><td>Agenda da assistente social</td></tr>
+    <tr><td>Registrar o resultado do atendimento</td><td><span class="tag web">Web</span></td><td>Status do direito no app</td></tr>
+    <tr><td>“Abrir vaga” de creche</td><td><span class="tag web">Web</span></td><td>Convocação no app da família</td></tr>
+    <tr><td>Aceitar ou recusar a vaga</td><td><span class="tag app">App</span></td><td>Lista da creche (resposta chega destacada)</td></tr>
+  </table>
+
+  <h3>Como foi feito</h3>
+  <ul>
+    <li><b>Regras no banco, não nas telas.</b> As funções <i>emitir_senha, chamar_proxima</i> (prioridade primeiro, sem chamar a mesma pessoa em dois guichês), <i>atualizar_status_senha, registrar_atendimento, abrir_vaga</i> (prazo de 48 h), <i>responder_convocacao</i> e <i>expirar_convocacoes</i> ficam no PostgreSQL. Assim app e web se comportam igual.</li>
+    <li><b>Histórico automático.</b> Gatilhos gravam a tabela <i>historico</i> a cada mudança de status.</li>
+    <li><b>Uma camada de dados só.</b> Nas duas plataformas, nenhuma tela fala com o banco: tudo passa por uma interface <i>Backend</i> (<code>services/</code>) com duas implementações, Supabase e dados de demonstração locais.</li>
+    <li><b>Privacidade.</b> A página pública e os indicadores usam <i>views</i> agregadas, sem nome, documento ou qualquer dado pessoal.</li>
+    <li><b>Estado de conexão.</b> A web mostra “Ao vivo” ou “Reconectando…”, para quem atende saber se a tela está atualizada.</li>
+  </ul>
+  <p class="nota"><b>Dados e verificação.</b> Os dados iniciais são simulados (nomes, endereços e números fictícios), como a proposta permite. O fluxo entre as telas foi testado de ponta a ponta no <b>modo de demonstração</b>, em que as abas do navegador conversam entre si. O esquema SQL foi validado em um banco PostgreSQL local; a ligação com um projeto Supabase real depende de configurar as chaves (<code>.env</code>) e deve ser testada pela equipe antes da entrega. As políticas de segurança (RLS) são permissivas de propósito, só para a demonstração; em produção haveria autenticação real e regras por perfil.</p>
+  <p class="nota"><b>Regra de distância.</b> A senha da UBS pelo app só é liberada a até 5 km da unidade, pelo GPS do celular. É aplicada no app; uma versão de produção repetiria essa checagem no servidor.</p>
+</section>
+
+<!-- ================= 5. DESIGN E UX ================= -->
+<section>
+  <h2><span class="n">5</span>Decisões visuais e de UX</h2>
+  <div class="cap-linha"></div>
+  <div class="dois" style="grid-template-columns:1.25fr 1fr;align-items:start">
+    <div>
+      <h3 style="margin-top:0">Identidade comum nas duas plataformas</h3>
+      <ul>
+        <li><b>Logo:</b> a balança da justiça, em azul-marinho e ouro, para transmitir seriedade e confiança.</li>
+        <li><b>Cores:</b> fundo azul bem claro, azul-marinho como cor principal e ouro de destaque. As mesmas variáveis alimentam web e app (<code>docs/THEME.md</code>).</li>
+        <li><b>Tipografia:</b> Montserrat em vários pesos: <span style="font-weight:300">fino</span> nos textos de apoio, <span style="font-weight:400">normal</span> no corpo, <b>semibold</b> nos títulos e <b style="font-weight:800">negrito</b> nos números e códigos.</li>
+        <li><b>Tom sóbrio:</b> cantos pouco arredondados, sem sombras pesadas e cartões com borda fina. Evita o visual “enfeitado” e passa credibilidade para um serviço público.</li>
+        <li><b>Pessoas diversas:</b> personagens ilustrados de várias origens e idades, inclusive uma pessoa com o crachá do infinito colorido (neurodiversidade). Mostram que o serviço é para todos.</li>
+      </ul>
+    </div>
+    <div class="tres" style="grid-template-columns:1fr 1fr 1fr">
+      <img src="img/p0.svg"><img src="img/p3.svg"><img src="img/p5.svg"><img src="img/p7.svg"><img src="img/p1.svg"><img src="img/p6.svg">
+    </div>
+  </div>
+
+  <h3>UX guiada pela jornada</h3>
+  <div style="float:right;width:33%;display:flex;gap:6pt;margin:0 0 4pt 12pt"><figure class="fig cel"><img src="img/app_login.jpg"><figcaption>Entrada</figcaption></figure><figure class="fig cel"><img src="img/app_passo1.jpg"><figcaption>Passo a passo</figcaption></figure></div>
+  <ul>
+    <li><b>App: foco no “agora”.</b> O Início mostra apenas o que está em andamento e dois atalhos grandes. O cidadão está na rua, com pressa: poucos toques, botões grandes e linguagem direta.</li>
+    <li><b>Passo a passo de boas-vindas</b> (4 telas) com os personagens, para quem nunca usou o app.</li>
+    <li><b>Direito → ação.</b> Cada direito termina no botão certo (pegar senha, agendar, ver creches), sem a pessoa ter que procurar.</li>
+    <li><b>Status sempre com texto e ícone</b>, nunca só cor (“Aguardando”, “Sua vez! Vá ao guichê 2”, “Vaga disponível!”).</li>
+    <li><b>Web: uma tela por papel.</b> Menu e telas mudam conforme o perfil (UBS, CRAS ou creche). Atalho de teclado <b>N</b> para chamar a próxima pessoa, tabelas que viram listas de cartões e telão pensado para ser lido de longe.</li>
+    <li><b>Capa do site</b> com a frase de impacto e a explicação de como app e site se completam, sem pedir cadastro para entender a proposta.</li>
+    <li><b>Responsividade:</b> a web funciona de 320 px (zoom de 400%) a telas grandes, sem rolagem lateral; tabelas largas rolam dentro de uma região com foco.</li>
+  </ul>
+</section>
+
+<!-- ================= 6. MOTION ================= -->
+<section>
+  <h2><span class="n">6</span>Motion design</h2>
+  <div class="cap-linha"></div>
+  <p>Regra do projeto: <b>cada animação tem uma função</b> (orientar, dar retorno, mostrar mudança de estado ou reforçar a personalidade), é calma e nunca alarmante. A maioria dura de 200 a 300 ms.</p>
+  <h3>Plataforma web</h3>
+  <table>
+    <tr><th style="width:27%">Onde</th><th style="width:36%">O que acontece</th><th>Função na jornada</th></tr>
+    <tr><td class="s">Fila da UBS</td><td>A senha chamada sai da lista e as demais sobem suavemente (250 ms).</td><td>Mostrar o efeito do clique em “Chamar próximo”.</td></tr>
+    <tr><td class="s">Item novo do app</td><td>Entra com fundo amarelo e selo “Nova” por alguns segundos.</td><td>Mostrar que algo chegou do app em tempo real.</td></tr>
+    <tr><td class="s">Resposta da família (creche)</td><td>Linha em destaque por 8 s, selo “Respondeu agora” e aviso falado pelo leitor de tela.</td><td>Mostrar que a resposta chegou.</td></tr>
+    <tr><td class="s">Telão</td><td>A nova senha entra com zoom (0,85→1), borda amarela e “Chamando agora”.</td><td>Chamar a atenção na sala de espera.</td></tr>
+    <tr><td class="s">Selos de status</td><td>Trocam com transição curta (200 ms).</td><td>Mostrar mudança de estado.</td></tr>
+    <tr><td class="s">Troca de página</td><td>Aparece subindo 8 px (200 ms).</td><td>Orientar a navegação.</td></tr>
+    <tr><td class="s">Botões e confirmações</td><td>Estado de carregamento e faixa verde “Senha R003 chamada no guichê 1”.</td><td>Dar retorno imediato sobre a ação.</td></tr>
+    <tr><td class="s">Capa</td><td>Título aparece palavra por palavra, “o caminho” salta com mola e personagens entram em sequência (cerca de 2 s no total, depois tudo para).</td><td>Reforçar a personalidade sem ficar se mexendo.</td></tr>
+  </table>
+  <h3>Aplicativo</h3>
+  <table>
+    <tr><th style="width:27%">Onde</th><th style="width:36%">O que acontece</th><th>Função na jornada</th></tr>
+    <tr><td class="s">Capa e passo a passo</td><td>Elementos sobem e aparecem em sequência; os personagens flutuam devagar; cada passo entra com mola.</td><td>Receber a pessoa e explicar o app com leveza.</td></tr>
+    <tr><td class="s">Botões</td><td>Afundam levemente ao toque (escala 0,97) com mola.</td><td>Confirmar o toque.</td></tr>
+    <tr><td class="s">Telas de ação</td><td>Abrem deslizando por cima das abas.</td><td>Mostrar que é um passo à parte, que se fecha e volta ao início.</td></tr>
+    <tr><td class="s">Cartões do Início</td><td>Aparecem em sequência; a senha e o status são <b>anunciados</b> a leitores de tela quando mudam.</td><td>Mostrar mudança de estado (“Sua vez!”).</td></tr>
+    <tr><td class="s">Passo a passo e confirmações</td><td>Indicador de progresso com o ponto ativo alargado; a confirmação de senha e de agendamento aparece com ícone de sucesso.</td><td>Dar noção de progresso e fechar a ação.</td></tr>
+  </table>
+  <p class="nota"><b>Sensibilidade a movimento.</b> Na web, com a preferência “reduzir movimento” do sistema, o <i>motion</i> desliga as transformações, o Ant Design desliga as suas animações e uma regra global zera transições em CSS. Os destaques continuam como cor e texto, então nenhuma informação se perde. No app, as animações são curtas e só a capa e o passo a passo têm movimento contínuo (os personagens flutuando); <span class="ph">leitura da preferência de movimento do celular ainda é um próximo passo</span>.</p>
+</section>
+
+<!-- ================= 7. ACESSIBILIDADE ================= -->
+<section>
+  <h2><span class="n">7</span>Acessibilidade</h2>
+  <div class="cap-linha"></div>
+  <p>A acessibilidade foi requisito desde o início, não um ajuste no final.</p>
+  <table>
+    <tr><th style="width:24%">Recurso</th><th>Web</th><th>App</th></tr>
+    <tr><td class="s">Contraste</td><td>Cores validadas para WCAG AA (texto ≥ 4,5:1; bordas de campo ≥ 3:1), com contas em <code>docs/THEME.md</code>.</td><td>Mesmos tokens de cor da web.</td></tr>
+    <tr><td class="s">Tamanho do texto</td><td>Tudo em <code>rem</code>; respeita o ajuste do navegador; funciona com zoom de 400%.</td><td>Opção “Letras grandes” no Perfil (texto 18% maior em todo o app).</td></tr>
+    <tr><td class="s">Não depender só de cor</td><td>Status sempre com cor, ícone e texto; gráficos com tabela equivalente.</td><td>Status com texto (“Aguardando”, “Sua vez!”); tipo de serviço também por ícone.</td></tr>
+    <tr><td class="s">Leitores de tela</td><td>HTML semântico, títulos em ordem, rótulos em campos e botões, <code>aria-live</code> educado para filas e agenda e <b>assertivo</b> para a senha chamada no telão.</td><td>Papéis e rótulos em botões, abas, opções e caixas; mudanças de senha e status anunciadas; avisos como alerta.</td></tr>
+    <tr><td class="s">Alvos de toque / teclado</td><td>Navegação completa por teclado, link “Pular para o conteúdo” e foco visível de 3 px.</td><td>Botões e abas com 52 px de altura; chips e ícones com pelo menos 44 px, bem espaçados.</td></tr>
+    <tr><td class="s">Movimento</td><td>Respeita <code>prefers-reduced-motion</code>; capa sem animação contínua.</td><td>Animações curtas, sem piscar.</td></tr>
+    <tr><td class="s">Linguagem simples</td><td colspan="2">Textos curtos e diretos, sem siglas sem explicação. Ex.: “Você pode ter”, “O que levar”, “Sua vez! Vá ao guichê 2”. O telão ainda fala a senha em voz alta.</td></tr>
+    <tr><td class="s">Permissões explicadas</td><td>Não se aplica.</td><td>O pedido de localização explica por que (“conferir se você está perto da UBS”) e a tela diz o que fazer se a pessoa negar.</td></tr>
+  </table>
+  <p class="nota"><b>Como foi verificado.</b> A web passou por auditoria automática com axe-core (WCAG 2.2 AA e boas práticas) em 10 telas (capa, entrada, página pública, simulador, telão, fila, balcão, agenda, lista da creche e indicadores), com zero violações, e foi conferida em 320 px de largura. O app foi testado no navegador (versão web do Expo); <span class="ph">teste com leitor de tela real (VoiceOver ou TalkBack) no celular ainda deve ser feito pela equipe</span>.</p>
+  <div class="dois" style="grid-template-columns:90pt 90pt;gap:10pt;margin-bottom:6pt">
+    <figure class="fig cel"><img src="img/app_inicio_0.jpg"><figcaption>Texto normal</figcaption></figure>
+    <figure class="fig cel"><img src="img/app_inicio_grande.jpg"><figcaption>Com “Letras grandes”</figcaption></figure>
+  </div>
+</section>
+
+<!-- ================= 8. ODS ================= -->
+<section>
+  <h2><span class="n">8</span>Relação com os ODS</h2>
+  <div class="cap-linha"></div>
+  <p>O Meu Direito contribui principalmente com os Objetivos de Desenvolvimento Sustentável abaixo, porque ataca a distância entre o direito que existe e a pessoa que consegue usá-lo.</p>
+  <div class="ods"><div class="num" style="background:#E5243B">10</div><div><h3 style="margin:0 0 2pt">ODS 10 · Redução das Desigualdades <span class="tag ambos">principal</span></h3><p style="margin:0"><b>Meta 10.2:</b> promover a inclusão social de todos. Quem tem menos acesso à informação e à internet é quem mais perde direitos. O app explica em linguagem simples e a plataforma foi desenhada para pessoas idosas, com deficiência e neurodivergentes (letras grandes, contraste, voz no telão, atendimento no balcão para quem não tem celular).</p></div></div>
+  <div class="ods"><div class="num" style="background:#00689D">16</div><div><h3 style="margin:0 0 2pt">ODS 16 · Paz, Justiça e Instituições Eficazes <span class="tag ambos">principal</span></h3><p style="margin:0"><b>Metas 16.6 e 16.10:</b> instituições eficazes e transparentes, e acesso público à informação. A plataforma dá visibilidade ao atendimento (página pública com o movimento dos serviços e indicadores sem dados pessoais) e ajuda os serviços a atender melhor, ao mostrar a quem atende quem vai chegar e o que a pessoa já tem.</p></div></div>
+  <div class="ods"><div class="num" style="background:#E5243B">1</div><div><h3 style="margin:0 0 2pt">ODS 1 · Erradicação da Pobreza</h3><p style="margin:0"><b>Meta 1.3:</b> sistemas de proteção social. Cadastro Único, desconto na conta de luz e benefício para pessoa idosa ou com deficiência só protegem quem consegue acessá-los. O app mostra os direitos prováveis de cada pessoa e o caminho para conquistá-los.</p></div></div>
+  <div class="ods"><div class="num" style="background:#4C9F38">3</div><div><h3 style="margin:0 0 2pt">ODS 3 · Saúde e Bem-Estar</h3><p style="margin:0"><b>Meta 3.8:</b> acesso a serviços de saúde essenciais e a medicamentos. A senha pelo celular e o telão reduzem a espera na UBS, e o app informa que há remédios gratuitos pelo SUS e o que levar para retirá-los.</p></div></div>
+</section>
+
+<!-- ================= 9. TECNOLOGIA E ENTREGAS ================= -->
+<section>
+  <h2><span class="n">9</span>Tecnologias, organização e entregas</h2>
+  <div class="cap-linha"></div>
+  <table>
+    <tr><th style="width:24%">Parte</th><th>Tecnologias</th></tr>
+    <tr><td class="s">App mobile</td><td>Expo (React Native) e TypeScript, <code>react-native-svg</code> (logo e personagens), <code>expo-location</code> (GPS), Montserrat e <code>@supabase/supabase-js</code>.</td></tr>
+    <tr><td class="s">Plataforma web</td><td>Vite, React 19, TypeScript, Tailwind CSS v4, Ant Design 6, React Router, <code>motion</code>, lucide-react e Montserrat. Configuração de deploy para a Vercel (<code>web/vercel.json</code>).</td></tr>
+    <tr><td class="s">Banco e tempo real</td><td>Supabase (PostgreSQL, funções, gatilhos, views e Realtime): <code>supabase/schema.sql</code> e <code>supabase/seed.sql</code>.</td></tr>
+  </table>
+  <h3>Organização do repositório</h3>
+  <div class="card" style="font-family:ui-monospace,Menlo,monospace;font-size:8.8pt;line-height:1.6;white-space:pre">meu-direito/
+├─ web/        plataforma web (pages, components, services, hooks, theme, routes)
+├─ mobile/     app do cidadão (screens, components, services, state, theme)
+├─ supabase/   schema.sql e seed.sql (usados por web e app)
+└─ docs/       THEME.md, MOTION.md e este documento</div>
+  <h3>Como executar</h3>
+  <ul>
+    <li><b>Web:</b> <code>cd web &amp;&amp; npm install &amp;&amp; npm run dev</code> (http://localhost:5173).</li>
+    <li><b>App:</b> <code>cd mobile &amp;&amp; npm install &amp;&amp; npm run web</code> (navegador) ou <code>npm start</code> e Expo Go no celular.</li>
+    <li><b>Dados compartilhados:</b> configure <code>VITE_SUPABASE_URL</code> e <code>VITE_SUPABASE_ANON_KEY</code> (web) e <code>EXPO_PUBLIC_SUPABASE_URL</code> e <code>EXPO_PUBLIC_SUPABASE_ANON_KEY</code> (app). Sem elas, cada parte roda com dados de demonstração locais, que não são compartilhados entre web e app.</li>
+  </ul>
+
+  <h3>Links da entrega</h3>
+  <table>
+    <tr><th style="width:30%">Item</th><th>Link</th></tr>
+    <tr><td class="s">Repositório no GitHub</td><td><span class="ph">colar o link do repositório público</span></td></tr>
+    <tr><td class="s">Plataforma web publicada</td><td><span class="ph">colar o link do deploy (Vercel, Netlify ou GitHub Pages)</span></td></tr>
+    <tr><td class="s">Vídeo-pitch (2 a 3 minutos)</td><td>https://youtu.be/o2VoWSJshE0</td></tr>
+    <tr><td class="s">App (instruções ou Expo Snack)</td><td>Instruções no <code>README.md</code> do repositório.</td></tr>
+  </table>
+
+  <h3>Próximos passos</h3>
+  <ul>
+    <li>Autenticação real (por exemplo, login gov.br) e regras de segurança por perfil no banco.</li>
+    <li>Repetir a regra dos 5 km no servidor e usar localização aproximada para proteger a privacidade.</li>
+    <li>Notificações no celular (aviso de senha chamada e de vaga), além do aviso dentro do app.</li>
+    <li>Respeitar, no app, a preferência de “reduzir movimento” do sistema e testar com leitores de tela reais.</li>
+  </ul>
+</section>
+
+</body>
+</html>

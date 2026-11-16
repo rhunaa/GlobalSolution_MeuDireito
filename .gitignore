@@ -1,0 +1,13 @@
+# Ferramentas e arquivos locais
+.DS_Store
+.claude/
+
+# Material do vídeo e do PDF (pesado, não faz parte da entrega de código)
+video/
+
+# Dependências e builds (cada parte tem o seu .gitignore também)
+node_modules/
+dist/
+.expo/
+.env
+.env.local
